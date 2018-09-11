@@ -10,6 +10,7 @@
         <module name="springmvc2" />
         <module name="springmvc3" />
         <module name="springmvc4" />
+        <module name="springmvc5" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +18,7 @@
       <module name="springmvc2" target="1.7" />
       <module name="springmvc3" target="1.7" />
       <module name="springmvc4" target="1.7" />
+      <module name="springmvc5" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
