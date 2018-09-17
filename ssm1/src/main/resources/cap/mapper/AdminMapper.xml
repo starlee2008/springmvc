@@ -15,9 +15,24 @@
     select * from admin where id = #{id}
     </select>
 
+    <select id="getTotalCount" resultType="java.lang.Integer">
+     select count(*) from admin
+    </select>
+
+    <!--分页
+    <select id="findByPage" resultType="cap.mapper.AdminMapper.BaseResultMap">
+    select * from admin limit #{start},#{pageSize}
+    </select>
+
+    -->
     <select id="selectAll" resultMap="cap.mapper.AdminMapper.BaseResultMap">
         select * from admin order  by id
     </select>
+
+    <select id="findByPage" resultMap="cap.mapper.AdminMapper.BaseResultMap">
+        select * from admin
+        limit #{start},#{pageSize}
+</select>
 
     <delete id="deleteAdmin" parameterType="java.lang.Integer">
         delete from admin where id=#{id}
