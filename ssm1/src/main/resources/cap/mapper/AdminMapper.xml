@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cap.mapper.AdminMapper">
+
+    <resultMap id="BaseResultMap" type="cap.model.Admin">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+    <select id="selectById" resultType="cap.model.Admin" parameterType="Integer">
+    select * from admin where id = #{id}
+    </select>
+
+    <select id="selectAll" resultMap="cap.mapper.AdminMapper.BaseResultMap">
+        select * from admin order  by id
+    </select>
+
+    <delete id="deleteAdmin" parameterType="java.lang.Integer">
+        delete from admin where id=#{id}
+    </delete>
+
+    <insert id="addAdmin" parameterType="cap.model.Admin">
+        insert into admin(username,password) values (#{username},#{password})
+    </insert>
+
+    <update id="updateAdmin" parameterType="cap.model.Admin">
+        update admin set username=#{username},password=#{password} where id=#{id}
+    </update>
+
+
+</mapper>
