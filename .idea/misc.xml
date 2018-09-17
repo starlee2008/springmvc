@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/mybatis1" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc1" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc2" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc3" />
@@ -17,6 +18,7 @@
         <option value="$PROJECT_DIR$/springmvc4/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc5/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc6/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis1/pom.xml" />
       </list>
     </option>
   </component>
